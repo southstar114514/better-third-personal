@@ -1,0 +1,39 @@
+{
+  "Name": "ThirdPersonAim",
+  "Description": "Client-only over-the-shoulder camera with native Titan and anti-Titan reticles. Press 6 to toggle.",
+  "Version": "2.5.0",
+  "LoadPriority": 100,
+  "ConVars": [
+    {
+      "Name": "tp_offset",
+      "DefaultValue": "30"
+    },
+    {
+      "Name": "tp_height",
+      "DefaultValue": "8"
+    },
+    {
+      "Name": "tp_distance",
+      "DefaultValue": "75"
+    },
+    {
+      "Name": "tp_aim_distance",
+      "DefaultValue": "5000"
+    },
+    { "Name": "tp_ads_distance", "DefaultValue": "55" },
+    { "Name": "tp_titan_distance", "DefaultValue": "260" },
+    { "Name": "tp_titan_ads_distance", "DefaultValue": "200" },
+    { "Name": "tp_titan_offset", "DefaultValue": "100" },
+    { "Name": "tp_titan_height", "DefaultValue": "40" }
+  ],
+  "Scripts": [
+    {
+      "Path": "thirdperson_aim.nut",
+      "RunOn": "CLIENT",
+      "ClientCallback": {
+        "After": "TPA_Init",
+        "Destroy": "TPA_Shutdown"
+      }
+    }
+  ]
+}
